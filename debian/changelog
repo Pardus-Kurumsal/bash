@@ -1,3 +1,14 @@
+bash (4.4-1pardus1) pardus; urgency=medium
+
+  * Enable a couple of useful bash aliases
+    - skel.bashrc
+      - ls aliases
+      - grep aliases
+    - skel.profile
+      - user specific environment and PATH setup
+
+ -- Cihangir Akturk <cihangir@pardus.org.tr>  Fri, 11 Nov 2016 12:16:27 +0000
+
 bash (4.4-1) unstable; urgency=medium
 
   * Bash 4.4 release.
