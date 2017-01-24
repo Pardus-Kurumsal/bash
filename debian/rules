@@ -39,7 +39,7 @@ ifneq (,$(findstring nostrip,$(DEB_BUILD_OPTIONS)))
 endif
 
 
-dpkg_buildflags = DEB_CFLAGS_MAINT_APPEND=-Wall dpkg-buildflags
+dpkg_buildflags = DEB_CFLAGS_MAINT_APPEND="-Wall -no-pie" dpkg-buildflags
 CFLAGS := $(shell $(dpkg_buildflags) --get CFLAGS)
 CPPFLAGS := $(shell $(dpkg_buildflags) --get CPPFLAGS)
 LDFLAGS := $(shell $(dpkg_buildflags) --get LDFLAGS)
@@ -70,7 +70,6 @@ termcap_lib := $(if $(wildcard /usr/lib/libtinfo.so /usr/lib/$(DEB_HOST_MULTIARC
 		 -lncurses)
 
 conf_args = \
-	--with-curses \
 	--enable-largefile \
 	--prefix=/usr \
 	--infodir=/usr/share/info \
@@ -167,7 +166,6 @@ clean:
 	rm -f debian/README.Debian
 	rm -rf locales
 	rm -f clear_console
-	rm -rf .pc
 	dh_clean
 
 preinst-build: debian/bash.preinst
