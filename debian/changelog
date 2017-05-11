@@ -1,3 +1,12 @@
+bash (4.4-4pardus1) onyedi; urgency=medium
+
+  Rebase everything against the debian branch
+  * Enable a couple of useful bash aliases
+  * Update changelog for 4.4-1pardus1 release
+  * Add .drone.yml file
+
+ -- Cihangir Akturk <cihangir@pardus.org.tr>  Thu, 11 May 2017 11:56:50 +0300
+
 bash (4.4-4) unstable; urgency=medium
 
   * Apply upstream patches 008 - 011.
